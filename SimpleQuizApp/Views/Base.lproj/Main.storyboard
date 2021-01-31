@@ -199,7 +199,7 @@
                                     <constraint firstAttribute="height" constant="200" id="ZDQ-hU-wrP"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6X-xy-nnY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6X-xy-nnY">
                                 <rect key="frame" x="20" y="521" width="174" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.8406020447" blue="0.42924904089999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -217,10 +217,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didChooseAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="mZi-TM-MSw"/>
+                                    <action selector="canAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="g6C-lo-VL8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-2N-phM">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-2N-phM">
                                 <rect key="frame" x="20" y="599" width="174" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.8406020447" blue="0.42924904089999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -238,7 +238,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didChooseAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="Er2-Zk-aiZ"/>
+                                    <action selector="canAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="Xz7-Ou-fQO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCC-aH-JJe">
@@ -279,7 +279,7 @@
                                     <action selector="nextButtonDidTapped:" destination="R7Q-dj-mYK" eventType="touchUpInside" id="sN9-Tg-m2v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88x-qS-QOf">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88x-qS-QOf">
                                 <rect key="frame" x="220" y="599" width="174" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.84060204472780631" blue="0.42924904086362892" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -299,10 +299,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didChooseAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="f5Z-YH-YgE"/>
+                                    <action selector="canAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="jUi-lP-7kQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-ZW-RYz">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-ZW-RYz">
                                 <rect key="frame" x="220" y="521" width="174" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.8406020447" blue="0.42924904089999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -320,7 +320,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didChooseAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="4ne-mr-HSZ"/>
+                                    <action selector="canAnswerWithSender:" destination="7lx-2E-f5e" eventType="touchUpInside" id="df2-6t-B6G"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWJ-hw-kmL">
@@ -434,7 +434,6 @@
         <!--History View Controller-->
         <scene sceneID="CiP-c9-vQ6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y4Y-h1-nzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="historyViewController" id="dba-yr-Lmz" customClass="HistoryViewController" customModule="SimpleQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CT3-dp-BJl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -467,6 +466,7 @@
                         <outlet property="tableView" destination="jMx-zK-lcf" id="eaT-hd-Sn5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4Y-h1-nzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2182.608695652174" y="52.901785714285715"/>
         </scene>

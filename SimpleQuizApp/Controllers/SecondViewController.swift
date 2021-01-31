@@ -12,7 +12,7 @@ class SecondViewController: UIViewController{
     var questions = [Questions]()
     var answers = [Answers]()
     var btnsArray = [UIButton]()
-   static var results = [Float]()
+    static var results = [Float]()
     
     @IBOutlet weak var questionTextCounter: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -28,6 +28,15 @@ class SecondViewController: UIViewController{
     
     var currentQuestionNumber = 1
     var score: Float = 0
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //        constructQuestions()
+        if true{
+            
+        }
+        
+        showQuestions()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +64,9 @@ class SecondViewController: UIViewController{
         
         questions = [que1, que2, que3, que4, que5]
         answers = [ans1, ans2, ans3, ans4, ans5]
-        btnsArray = [button1, button2, button3, button4]
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-//        constructQuestions()
-        showQuestions()
-    }
+    
     
     fileprivate func showQuestions() {
         questionTextCounter.text = "Question #\(currentQuestionNumber)"
@@ -72,12 +77,12 @@ class SecondViewController: UIViewController{
         button3.setTitle(questions[currentQuestionNumber - 1].options[2], for: .normal)
         button4.setTitle(questions[currentQuestionNumber - 1].options[3], for: .normal)
         
-//        if questions[currentQuestionNumber - 1].isAnswered {
-//            btnsArray[questions[currentQuestionNumber - 1].correctAnswer].backgroundColor=UIColor.green
-//            if questions[currentQuestionNumber - 1].wrongAnswer >= 0 {
-//                btnsArray[questions[currentQuestionNumber - 1].wrongAnswer].backgroundColor=UIColor.red
-//            }
-//        }
+//                if questions[currentQuestionNumber - 1].isAnswered {
+//                    btnsArray[questions[currentQuestionNumber - 1].correctAnswer].backgroundColor=UIColor.green
+//                    if questions[currentQuestionNumber - 1].wrongAnswer >= 0 {
+//                        btnsArray[questions[currentQuestionNumber - 1].wrongAnswer].backgroundColor=UIColor.red
+//                    }
+//                }
     }
     
     fileprivate func scoreIncrementer() -> Float {
@@ -100,8 +105,8 @@ class SecondViewController: UIViewController{
         } else {
             SecondViewController.results.append(score)
             print(SecondViewController.results)
-//            Foundation.UserDefaults.standard.setValue(score, forKey: "score")
-
+            //            Foundation.UserDefaults.standard.setValue(score, forKey: "score")
+            
             
             let vc = storyboard?.instantiateViewController(withIdentifier: "resultViewController") as! ResultViewController
             vc.tempReciever = score
@@ -110,23 +115,28 @@ class SecondViewController: UIViewController{
         viewDidAppear(true)
     }
     
-    @IBAction func didChooseAnswer(sender: UIButton) {
+    @IBAction func canAnswer(sender: UIButton) {
+        if !questions[currentQuestionNumber - 1].isAnswered {
+            didChooseAnswer(sender: sender)
+        }
+    }
+    
+    fileprivate func didChooseAnswer(sender: UIButton) {
         questions[currentQuestionNumber - 1].isAnswered = true
-        if validate(option: sender.titleLabel!.text!) {
+        if validate(option: sender.tag) {
             print("TRUE")
             score += scoreIncrementer()
         }
         else {
-//        if questions[currentQuestionNumber - 1].correctAnswer != sender.tag{
-//            questions[currentQuestionNumber - 1].wrongAnswer = sender.tag
-//            score -= 1
+            questions[currentQuestionNumber - 1].wrongAnswer = sender.tag
+            
             print("False")
         }
         
     }
     
-    func validate(option: String) -> Bool{
-        return option == answers[currentQuestionNumber-1].answer
+    func validate(option: Int) -> Bool{
+        return option == questions[currentQuestionNumber - 1].correctAnswer
         
     }
 }
