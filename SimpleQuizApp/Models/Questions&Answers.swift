@@ -17,6 +17,6 @@ struct Questions: Codable {
     var isAnswered: Bool
 }
 
-struct Answers: Codable {
-    let answer: String
-}
+//struct Answers: Codable {
+//    let answer: String
+//}

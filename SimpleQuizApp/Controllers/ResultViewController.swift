@@ -14,11 +14,7 @@ class ResultViewController: UIViewController {
     public var tempReciever: Float?
     
     override func viewDidAppear(_ animated: Bool) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-//        print(vc.results)
-        print(SecondViewController.results)
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "historyViewController") as! HistoryViewController
-//        print(vc.scores)
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     override func viewDidLoad() {

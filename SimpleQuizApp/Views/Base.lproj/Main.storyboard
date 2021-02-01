@@ -28,6 +28,11 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="START!"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9R-QJ-PwE"/>
                                 </connections>
@@ -45,6 +50,11 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Last Results"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="resultDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNk-sK-O1y"/>
                                 </connections>
@@ -188,6 +198,10 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question N#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spp-mE-EFK">
                                 <rect key="frame" x="20" y="162" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EYY-yQ-aJ5"/>
+                                    <constraint firstAttribute="width" constant="374" id="K8e-2V-oS1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -337,15 +351,17 @@
                         <viewLayoutGuide key="safeArea" id="Mxn-uz-unG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="puG-RL-GN2" firstAttribute="top" secondItem="spp-mE-EFK" secondAttribute="bottom" constant="40" id="40K-fh-9h8"/>
+                            <constraint firstItem="spp-mE-EFK" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="5tC-4S-OK4"/>
                             <constraint firstItem="e8I-mg-RBo" firstAttribute="leading" secondItem="WCC-aH-JJe" secondAttribute="trailing" constant="8" symbolic="YES" id="81k-Ww-gtH"/>
                             <constraint firstItem="ozm-2N-phM" firstAttribute="top" secondItem="s6X-xy-nnY" secondAttribute="bottom" constant="23" id="C60-Uk-Kha"/>
+                            <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="spp-mE-EFK" secondAttribute="trailing" constant="20" id="ClW-H8-C8a"/>
                             <constraint firstItem="e8I-mg-RBo" firstAttribute="top" secondItem="88x-qS-QOf" secondAttribute="bottom" constant="103" id="E5N-ai-Ijc"/>
                             <constraint firstItem="JWJ-hw-kmL" firstAttribute="top" secondItem="puG-RL-GN2" secondAttribute="bottom" constant="33" id="JxU-B1-7fe"/>
-                            <constraint firstItem="puG-RL-GN2" firstAttribute="top" secondItem="spp-mE-EFK" secondAttribute="bottom" constant="40" id="LgK-Oo-w6d"/>
                             <constraint firstItem="Mxn-uz-unG" firstAttribute="bottom" secondItem="WCC-aH-JJe" secondAttribute="bottom" constant="75" id="QrR-o2-JDv"/>
                             <constraint firstItem="s6X-xy-nnY" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="Sgf-1V-HsU"/>
                             <constraint firstItem="s6X-xy-nnY" firstAttribute="top" secondItem="JWJ-hw-kmL" secondAttribute="bottom" constant="26" id="Smo-2Y-ld7"/>
-                            <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="spp-mE-EFK" secondAttribute="trailing" constant="20" id="UhP-m8-NzA"/>
+                            <constraint firstItem="spp-mE-EFK" firstAttribute="top" secondItem="Mxn-uz-unG" secondAttribute="top" constant="118" id="WV6-Vi-q9c"/>
                             <constraint firstItem="JWJ-hw-kmL" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="XPB-y0-UjJ"/>
                             <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="JWJ-hw-kmL" secondAttribute="trailing" constant="20" id="YES-DU-o5Y"/>
                             <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="e8I-mg-RBo" secondAttribute="trailing" constant="20" id="eTc-gM-cAv"/>
@@ -356,9 +372,7 @@
                             <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="Eig-ZW-RYz" secondAttribute="trailing" constant="20" id="kLA-Dc-kGF"/>
                             <constraint firstItem="puG-RL-GN2" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="kj6-DR-Z4W"/>
                             <constraint firstItem="88x-qS-QOf" firstAttribute="top" secondItem="Eig-ZW-RYz" secondAttribute="bottom" constant="23" id="m6s-U1-2JC"/>
-                            <constraint firstItem="spp-mE-EFK" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="ncZ-aN-oCg"/>
                             <constraint firstItem="WCC-aH-JJe" firstAttribute="leading" secondItem="Mxn-uz-unG" secondAttribute="leading" constant="20" id="utn-JL-dkC"/>
-                            <constraint firstItem="spp-mE-EFK" firstAttribute="top" secondItem="Mxn-uz-unG" secondAttribute="top" constant="118" id="wLG-Hy-TnB"/>
                             <constraint firstItem="Mxn-uz-unG" firstAttribute="trailing" secondItem="puG-RL-GN2" secondAttribute="trailing" constant="20" id="zAa-k3-0xj"/>
                         </constraints>
                     </view>
@@ -398,6 +412,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="HOME PAGE"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backToHomeDidTapped:" destination="4GD-Mp-sHD" eventType="touchUpInside" id="Cdm-Wj-tae"/>
                                 </connections>

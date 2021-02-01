@@ -14,13 +14,12 @@ class HistoryViewController: UIViewController {
     
     
     override func viewDidLoad() {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "resultViewController") as! ResultViewController
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "superNaruto")!);
     }
     
 
@@ -37,6 +36,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.receivedScore.text = "\(SecondViewController.results[indexPath.row])"
         cell.maximumScore.text = "/ 100"
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "narutooo")!)
         return cell
     }
     
